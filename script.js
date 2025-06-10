@@ -108,6 +108,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function limparConteudoDiv() {
   const limparDiv1 = document.getElementById('elementos-selecionados');
   const limparDiv2 = document.getElementById('resultado-combinacao');
-  limparDiv1.innerText = ''; 
-  limparDiv2.innerText = '';
+
+  if (limparDiv1) { 
+      limparDiv1.innerText = ''; 
+  }
+  if (limparDiv2) { 
+      limparDiv2.innerText = '';
+  }
+  elementosSelecionados = []; 
 }
