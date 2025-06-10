@@ -81,7 +81,7 @@ areaCombinacao.addEventListener('drop', (e) => {
 
 function atualizarCombinacao() {
   const combinacoes = {
-    'H+O': 'H₂O',
+    'H+H+O': 'H₂O',
     'Na+Cl': 'NaCl',
     'C+O+O': 'CO₂'
   };
@@ -89,7 +89,7 @@ function atualizarCombinacao() {
   elementosSelecionadosDiv.textContent = `Selecionados: ${elementosSelecionados.join(', ')}`;
 
   const chave = elementosSelecionados.slice().sort().join('+');
-  const resultado = combinacoes[chave] || 'Nenhuma combinação conhecida';
+  const resultado = combinacoes[chave] || 'Nenhuma combinação';
 
   resultadoCombinacao.textContent = `Resultado: ${resultado}`;
 }
@@ -105,3 +105,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+function limparConteudoDiv() {
+  const limparDiv1 = document.getElementById('elementos-selecionados');
+  const limparDiv2 = document.getElementById('resultado-combinacao');
+  limparDiv1.innerText = ''; 
+  limparDiv2.innerText = '';
+}

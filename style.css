@@ -82,3 +82,21 @@ h1, h2 {
   font-size: 16px;
   text-align: center;
 }
+
+.limparf {
+  width: 50%;
+  height: 10%;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color:#FF6666;
+}
+
+.limparf:hover {
+  width: 50%;
+  height: 10%;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color:#fb3c3c;
+}
