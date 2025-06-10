@@ -5,32 +5,41 @@ body {
   margin: 0;
   padding: 20px;
 }
-
-h1 {
+ 
+h1, h2 {
   margin-bottom: 20px;
 }
-
+ 
+#container-principal {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+ 
 .tabela-periodica {
   display: grid;
-  grid-template-columns: repeat(18, 50px);
-  gap: 5px;
+  grid-template-columns: repeat(18, 40px); /* reduzido de 50px para 40px */
+  gap: 4px;
   justify-content: center;
 }
-
+ 
 .elemento {
   background-color: #386ca8;
   color: black;
   border-radius: 6px;
-  padding: 8px 5px;
-  font-size: 13px;
-  cursor: pointer;
+  padding: 6px 3px;
+  font-size: 11px;
+  cursor: grab;
   transition: background-color 0.2s ease;
+  user-select: none;
 }
-
+ 
 .elemento:hover {
   background-color: #4a73b0;
 }
-
+ 
 .info-elemento {
   margin-top: 20px;
   max-width: 350px;
@@ -43,50 +52,33 @@ h1 {
   display: none;
   text-align: left;
 }
-
-/* Cores por grupo químico */
-.nao-metal {
-  background-color: #7cbd7c; /* verde */
-  color: black;
+ 
+.nao-metal { background-color: #7cbd7c; color: black; }
+.gases-nobres { background-color: #FF6666; color: black; }
+.metais-alcalinos { background-color: #FFB347; color: black; }
+.metais-alcalino-terrosos { background-color: #FFD700; color: black; }
+.metais-de-transicao { background-color: rgb(214, 153, 163); color: black; }
+.metaloides { background-color: #5babb2; color: black; }
+.halogenios { background-color: #51d6df; color: black; }
+.lantanideos { background-color: #FF69B4; color: black; }
+.actinideos { background-color: #BA55D3; color: white; }
+ 
+.area-combinacao {
+  width: 250px;
+  height: 250px;
+  border: 3px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 16px;
+  background-color: #fefefe;
+  border-radius: 10px;
+  margin: 0;
 }
-
-.gases-nobres {
-  background-color: #FF6666; /* vermelho claro */
-  color: black;
+ 
+#elementos-selecionados, #resultado-combinacao {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
 }
-
-.metais-alcalinos {
-  background-color: #FFB347; /* laranja */
-  color: black;
-}
-
-.metais-alcalino-terrosos {
-  background-color: #FFD700; /* amarelo */
-  color: black;
-}
-
-.metais-de-transicao {
-  background-color: rgb(214, 153, 163);
-  color: black;
-}
-
-.metaloides {
-  background-color: #5babb2; /* dourado */
-  color: black;
-}
-
-.halogenios {
-  background-color: #51d6df; /* verde água */
-  color: black;
-}
-
-.lantanideos {
-  background-color: #FF69B4; /* rosa */
-  color: black;
-}
-
-.actinideos {
-  background-color: #BA55D3; /* roxo */
-  color: white;
-}
-
