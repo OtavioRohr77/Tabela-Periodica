@@ -93,3 +93,15 @@ function atualizarCombinacao() {
 
   resultadoCombinacao.textContent = `Resultado: ${resultado}`;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const rolar = document.getElementById('tabela');
+  const secaoDestino = document.getElementById('info');
+
+  rolar.addEventListener('click', function() {
+      secaoDestino.scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
